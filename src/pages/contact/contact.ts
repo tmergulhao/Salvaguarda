@@ -10,6 +10,6 @@ import { DataService } from './../../service/data.service';
 export class ContactPage {
   dado: any;
   constructor(public navCtrl: NavController, private data: DataService) {
-    this.dado = data.dados_policiais();  
+    this.dado = data.dicas();  
   }
 }
