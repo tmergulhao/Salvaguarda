@@ -49,6 +49,4 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
-www/*
-www/build/main.js
-www/build/main.js.map
+www/
