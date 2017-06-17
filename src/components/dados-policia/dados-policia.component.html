@@ -1,11 +1,18 @@
 <ion-card *ngFor="let d of dados">
     <ion-card-content>
-        <div float-left style="border-radius: 50%; border: solid 1rem #1D3DE6">
-            <img src="{{d.img}}" >
-        </div>
-        <div margin-left text-center>
-            <h1>{{d.nomeCidade}}</h1>
-            <h6>{{d.outrasInfo}}</h6>
+        <ion-row>
+            <ion-col col-1>
+                <ion-icon [name]="d.icone" style="width:5%"></ion-icon>
+            </ion-col>
+            <ion-col col-6>
+                <span>{{d.descricao}}</span>
+            </ion-col>
+            <ion-col col-3>
+                {{d.porcentagem}}% Salvo
+            </ion-col>
+        </ion-row>
+        <div >
+            <progress max="100" value="{{d.porcentagem}}" style="width:100%"></progress>
         </div>
     </ion-card-content>
   </ion-card>
