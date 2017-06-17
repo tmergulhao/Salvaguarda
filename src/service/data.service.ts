@@ -165,4 +165,29 @@ export class DataService{
             }
         ];
     }
+
+    dadosPoliciais(){
+        return [
+            {
+                icone: "car",
+                descricao: "Acidentes Automotivos",
+                porcentagem: 45
+            },
+             {
+                icone: "car",
+                descricao: "Acidentes Automotivos",
+                porcentagem: 30
+            },
+             {
+                icone: "car",
+                descricao: "Acidentes Automotivos",
+                porcentagem: 20
+            },
+             {
+                icone: "car",
+                descricao: "Acidentes Automotivos",
+                porcentagem: 80
+            }
+        ];
+    }
 }
