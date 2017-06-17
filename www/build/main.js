@@ -38084,11 +38084,47 @@ var DataService = (function () {
     DataService.prototype.dicas = function () {
         return [
             {
-                title: "Lago Norte",
-                body: "Outras informações importantes.",
-                callToAction: "",
-                icon: "./../assets/img/mapa-pequeno-lago-norte.png"
-            }
+                title: "Maus tratos à animais",
+                body: "Para situações de maus-tratos aos animais e crimes ambientais em geral, o Ibama esta disponível para te ajudar.",
+                callToAction: "Chamar ao Ibama 0800-618080",
+                icon: "./../assets/dicas-tabela/cachorro-tabela.png"
+            },
+            {
+                title: "Abuso de autoridade",
+                body: "Para situações de danos abuso de autoridade é aconselhado ligar no 127, Ministério Público.",
+                callToAction: "Chamar o Ministério Público 127",
+                icon: "./../assets/dicas-tabela/autoridade-tabela.png"
+            },
+            {
+                title: "Amparo às minorias",
+                body: "Para o serviço de atendimento de denúncias de violação dos direitos humanos, como preconceito e violencia contra idosos e crianças, população LGBT e pessoas com necessidades especiais ligue para 100.",
+                callToAction: "Ouvidoria de Direitos Humanos",
+                icon: "./../assets/dicas-tabela/minorias-tabela.png"
+            },
+            {
+                title: "Proteção à mulher",
+                body: "Para mais informação sobre direitos, ajuda psicológica e locais de amparo à mulheres em situação de risco ligue para a Central de Atendimento à Mulher.",
+                callToAction: "Chamar ao Central 180",
+                icon: "./../assets/dicas-tabela/mulher-tabela.png"
+            },
+            {
+                title: "Danos à propriedade pública",
+                body: "Para situações de danos ao patrimônio público e ao meio ambiente é aconselhado ligar no 127, Ministério Público.",
+                callToAction: "Chamar o Ministério Público 127",
+                icon: "./../assets/dicas-tabela/propridade-tabela.png"
+            },
+            {
+                title: "Saúde e primeiros socorros",
+                body: "Para o atendimento de urgências médicas e orientações em geral sobre como prosseguir em casos de emergência é aconselhado ligar para o Serviço de Atendimento Móvel, o SAMU.",
+                callToAction: "Chamar o SAMU 192",
+                icon: "./../assets/dicas-tabela/saude-tabela.png"
+            },
+            {
+                title: "Perturbação",
+                body: "Sempre que possível e seguro é indicado que conflitos sejam resolvidos sem o involvimento do estado. No entanto, em outros casos é aconselhado que sejam informadas as autoridades com o objetivo de evitar confronto entre cidadãos. Ligar para a AGEFIS é sempre uma boa opção no caso de perturbação da paz pública; o telefone é 3961-5126.",
+                callToAction: "Chamar a AGEFIS 3961-5126",
+                icon: "./../assets/dicas-tabela/som-tabela.png"
+            },
         ];
     };
     DataService.prototype.perguntas = function () {
@@ -56322,6 +56358,7 @@ HomePage = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_data_service__ = __webpack_require__(39);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuestionarioComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56334,17 +56371,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var QuestionarioComponent = (function () {
-    function QuestionarioComponent(params, viewCtrl) {
+    function QuestionarioComponent(params, viewCtrl, data) {
         this.viewCtrl = viewCtrl;
-        console.log('UserId', params.get('userId'));
+        this.data = data;
+        this.perguntas = [];
+        this.cont = 1;
+        this.dado = data.perguntas;
+        // for(let i=0; i<5; i++){
+        //   console.log(Math.floor(Math.random() * 40));
+        //     console.log(this.dado);
+        //     this.perguntas.push(this.dado[Math.floor(Math.random() * 40)]); 
+        // }
+        console.log(this.perguntas);
     }
     QuestionarioComponent.prototype.dismiss = function () {
         var data = { 'foo': 'bar' };
         this.viewCtrl.dismiss(data);
     };
     QuestionarioComponent.prototype.resposta = function (resp) {
-        console.log(resp);
+        this.cont++;
     };
     return QuestionarioComponent;
 }());
@@ -56352,9 +56399,10 @@ QuestionarioComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
         selector: 'sg-questionario',template:/*ion-inline-start:"C:\Users\ZEUS\Desktop\hackaton\Salvaguarda\src\pages\questionario\questionario.component.html"*/'<ion-header style="background:#2F62ED;">\n\n  <ion-navbar style="background:#2F62ED;">\n\n    <ion-buttons left>\n\n      <button ion-button icon-only (click)="dismiss()">\n\n        <ion-icon name="arrow-back"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n        teste\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n<ion-content style="background:#2F62ED;" text-center padding>\n\n        <div style="height:80%">\n\n        \n\n        <p>Basta responder o quiz para salvar esta região</p>\n\n          \n\n        </div>\n\n\n\n        <button ion-button large color="success" (click)="resposta(\'sim\')">SIM</button>\n\n        <button ion-button large color="danger" (click)="resposta(\'nao\')">NÃO</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\ZEUS\Desktop\hackaton\Salvaguarda\src\pages\questionario\questionario.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__service_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_data_service__["a" /* DataService */]) === "function" && _c || Object])
 ], QuestionarioComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=questionario.component.js.map
 
 /***/ }),
@@ -75153,7 +75201,7 @@ __decorate([
 ], DicasComponent.prototype, "dados", void 0);
 DicasComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'sg-dicas',template:/*ion-inline-start:"C:\Users\ZEUS\Desktop\hackaton\Salvaguarda\src\components\dicas\dicas.component.html"*/'<ion-card *ngFor="let d of dados">\n\n    <ion-card-content>\n\n        <div float-left>\n\n            <ion-icon [name]="d.icone"></ion-icon>\n\n        </div>\n\n        <div>\n\n            <div>\n\n                <h1>{{d.title}}</h1>\n\n            </div>\n\n            <div>\n\n                <h3>{{d.body}}</h3>\n\n            </div>\n\n        </div>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  title,\n\n  icone,\n\n  body,\n\n  action'/*ion-inline-end:"C:\Users\ZEUS\Desktop\hackaton\Salvaguarda\src\components\dicas\dicas.component.html"*/,
+        selector: 'sg-dicas',template:/*ion-inline-start:"C:\Users\ZEUS\Desktop\hackaton\Salvaguarda\src\components\dicas\dicas.component.html"*/'<!--<ion-card *ngFor="let d of dados" (click)="">\n\n    <ion-card-content>\n\n        <div float-left>\n\n            <ion-icon [name]="d.icone"></ion-icon>\n\n        </div>\n\n        <div>\n\n            <div>\n\n                <h1>{{d.title}}</h1>\n\n            </div>\n\n            <div>\n\n                <h3>{{d.body}}</h3>\n\n            </div>\n\n        </div>\n\n    </ion-card-content>\n\n  </ion-card>-->'/*ion-inline-end:"C:\Users\ZEUS\Desktop\hackaton\Salvaguarda\src\components\dicas\dicas.component.html"*/,
         styles: []
     }),
     __metadata("design:paramtypes", [])
