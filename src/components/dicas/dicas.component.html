@@ -1,0 +1,20 @@
+<ion-card *ngFor="let d of dados">
+    <ion-card-content>
+        <div float-left>
+            <ion-icon [name]="d.icone"></ion-icon>
+        </div>
+        <div>
+            <div>
+                <h1>{{d.title}}</h1>
+            </div>
+            <div>
+                <h3>{{d.body}}</h3>
+            </div>
+        </div>
+    </ion-card-content>
+  </ion-card>
+
+  title,
+  icone,
+  body,
+  action

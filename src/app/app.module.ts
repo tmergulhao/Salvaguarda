@@ -18,7 +18,7 @@ import { AreasSalvasComponent } from './../components/areas-salvas/salvos.compon
 import { DadosPoliciaComponent } from './../components/dados-policia/dados-policia.component';
 import { MapaScoreComponent } from './../components/mapa-score/mapa-score.component';
 import { QuestionarioComponent } from './../pages/questionario/questionario.component';
-import { DicasComponent } from "../components/dicas/dicas.component";
+import { DicasComponent } from "./../components/dicas/dicas.component";
 
 @NgModule({
   declarations: [
