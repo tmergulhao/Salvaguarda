@@ -11,6 +11,146 @@ export class DataService{
             }
 		];
 	}
+	perguntas () {
+		return [
+			{
+				body: "Você já viu algum acidente de transito nesta área?",
+				tags: ["transito"]
+			},
+			{
+				body: "Na sua opinião, as ruas desta região estão em boa condição?",
+				tags: ["transito"]
+			},
+			{
+				body: "Os motoristas param na faixa de pedestre por aqui?",
+				tags: ["transito"]
+			},
+			{
+				body: "Você ouve muitas buzinadas nesta área?",
+				tags: ["transito"]
+			},
+			{
+				body: "Há muitas escolas nesta região?",
+				tags: ["transito"]
+			},
+			{
+				body: "Há muitos bares nessa região?",
+				tags: ["transito"]
+			},
+			{
+				body: "Fica muito congestionado no horário de pico por aqui?",
+				tags: ["transito"]
+			},
+			{
+				body: "Você acha que é difícil dormir aqui por causa de barulho?",
+				tags: ["perturbacao"]
+			},
+			{
+				body: "Acontecem muitos eventos ou festas por aqui?",
+				tags: ["perturbacao"]
+			},
+			{
+				body: "Nesta área existem muitos bares?",
+				tags: ["perturbacao"]
+			},
+			{
+				body: "Tem alguma instituição de ensino superior nesta área?",
+				tags: ["perturbacao"]
+			},
+			{
+				body: "Você se sentiria seguro fazendo uma denúncia de desordem pública nesta área?",
+				tags: ["perturbacao"]
+			},
+			{
+				body: "Você já presenciou alguma briga por aqui?",
+				tags: ["ofensas"]
+			},
+			{
+				body: "Você já se sentiu constrangido ou ofendido por um entranho por aqui?",
+				tags: ["ofensas"]
+			},
+			{
+				body: "As pessoas desta região são amigáveis com estranhos?",
+				tags: ["ofensas"]
+			},
+			{
+				body: "Você já presenciou algum destrato ou insulto nesta região?",
+				tags: ["ofensas"]
+			},
+			{
+				body: "Você já sofreu ou presenciou assédio moral aqui?",
+				tags: ["ofensas"]
+			},
+			{
+				body: "Você já presenciou preconceito racial nesta área?",
+				tags: ["inclusao"]
+			},
+			{
+				body: "Você acha que os ambientes aqui são inclusivos à minorias?",
+				tags: ["inclusao"]
+			},
+			{
+				body: "Você acha que alguém estaria seguro em expressar suas crenças e identidade neste local?",
+				tags: ["inclusao"]
+			},
+			{
+				body: "Você já foi furtado nesta região?",
+				tags: ["furtos"]
+			},
+			{
+				body: "É seguro atender o telefone por aqui?",
+				tags: ["furtos"]
+			},
+			{
+				body: "Você acha que é provável ser furtado por aqui?",
+				tags: ["furtos"]
+			},
+			{
+				body: "Você já sofreu algum golpe por aqui?",
+				tags: ["furtos"]
+			},
+			{
+				body: "Você já viu alguém cometer um furto por aqui?",
+				tags: ["furtos"]
+			},
+			{
+				body: "Você já ouviu falar de um furto que aconteceu por aqui?",
+				tags: ["furtos"]
+			},
+			{
+				body: "Você acha que conseguiria reaver seus bens se os perdesse por aqui?",
+				tags: ["furtos"]
+			},
+			{
+				body: "Você diria que os cachorros latem excessivamente por aqui?",
+				tags: ["animais"]
+			},
+			{
+				body: "Existem animais abandonados nesta região?",
+				tags: ["animais"]
+			},
+			{
+				body: "Você suspeita que algum animal esteja sofrendo maus-tratros por aqui?",
+				tags: ["animais"]
+			},
+			{
+				body: "Você já presenciou o atropelamento de algum animal por aqui?",
+				tags: ["animais"]
+			},
+			{
+				body: "Você já sofreu alguma ameaça nesta região?",
+				tags: ["ameacas"]
+			},
+			{
+				body: "Você conhece algum caso recente de alguém que foi ameaçado por aqui?",
+				tags: ["ameacas"]
+			},
+			{
+				body: "Você sabe o que fazer/quem contatar caso receba algum tipo de ameaça?",
+				tags: ["ameacas"]
+			},
+		]
+	}
     salvos(){
         return [
             {
