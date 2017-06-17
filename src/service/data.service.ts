@@ -5,11 +5,47 @@ export class DataService{
 	dicas(){
 		return [
 			{
-                title: "Lago Norte",
-                body: "Outras informações importantes.",
-                callToAction: "",
-                icon: "./../assets/img/mapa-pequeno-lago-norte.png"
-            }
+                title: "Maus tratos à animais",
+                body: "Para situações de maus-tratos aos animais e crimes ambientais em geral, o Ibama esta disponível para te ajudar.",
+                callToAction: "Chamar ao Ibama 0800-618080",
+                icon: "./../assets/dicas-tabela/cachorro-tabela.png"
+            },
+            {
+                title: "Abuso de autoridade",
+                body: "Para situações de danos abuso de autoridade é aconselhado ligar no 127, Ministério Público.",
+                callToAction: "Chamar o Ministério Público 127",
+                icon: "./../assets/dicas-tabela/autoridade-tabela.png"
+            },
+            {
+                title: "Amparo às minorias",
+                body: "Para o serviço de atendimento de denúncias de violação dos direitos humanos, como preconceito e violencia contra idosos e crianças, população LGBT e pessoas com necessidades especiais ligue para 100.",
+                callToAction: "Ouvidoria de Direitos Humanos",
+                icon: "./../assets/dicas-tabela/minorias-tabela.png"
+            },
+            {
+                title: "Proteção à mulher",
+                body: "Para mais informação sobre direitos, ajuda psicológica e locais de amparo à mulheres em situação de risco ligue para a Central de Atendimento à Mulher.",
+                callToAction: "Chamar ao Central 180",
+                icon: "./../assets/dicas-tabela/mulher-tabela.png"
+            },
+            {
+                title: "Danos à propriedade pública",
+                body: "Para situações de danos ao patrimônio público e ao meio ambiente é aconselhado ligar no 127, Ministério Público.",
+                callToAction: "Chamar o Ministério Público 127",
+                icon: "./../assets/dicas-tabela/propridade-tabela.png"
+            },
+            {
+                title: "Saúde e primeiros socorros",
+                body: "Para o atendimento de urgências médicas e orientações em geral sobre como prosseguir em casos de emergência é aconselhado ligar para o Serviço de Atendimento Móvel, o SAMU.",
+                callToAction: "Chamar o SAMU 192",
+                icon: "./../assets/dicas-tabela/saude-tabela.png"
+            },
+            {
+                title: "Perturbação",
+                body: "Sempre que possível e seguro é indicado que conflitos sejam resolvidos sem o involvimento do estado. No entanto, em outros casos é aconselhado que sejam informadas as autoridades com o objetivo de evitar confronto entre cidadãos. Ligar para a AGEFIS é sempre uma boa opção no caso de perturbação da paz pública; o telefone é 3961-5126.",
+                callToAction: "Chamar a AGEFIS 3961-5126",
+                icon: "./../assets/dicas-tabela/som-tabela.png"
+            },
 		];
 	}
 	perguntas () {
