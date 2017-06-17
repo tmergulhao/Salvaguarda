@@ -17,6 +17,8 @@ import { DataService } from './../service/data.service';
 import { AreasSalvasComponent } from './../components/areas-salvas/salvos.component';
 import { DadosPoliciaComponent } from './../components/dados-policia/dados-policia.component';
 import { MapaScoreComponent } from './../components/mapa-score/mapa-score.component';
+import { QuestionarioComponent } from './../pages/questionario/questionario.component';
+import { DicasComponent } from "../components/dicas/dicas.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MapaScoreComponent } from './../components/mapa-score/mapa-score.compon
     AreasSalvasComponent,
     DadosPoliciaComponent,
     ConfirmacaoGameComponent,
-    MapaScoreComponent
+    MapaScoreComponent,
+    QuestionarioComponent,
+    DicasComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,8 @@ import { MapaScoreComponent } from './../components/mapa-score/mapa-score.compon
     ContactPage,
     HomePage,
     TabsPage,
-    ConfirmacaoGameComponent
+    ConfirmacaoGameComponent,
+    QuestionarioComponent
   ],
   providers: [
     StatusBar,

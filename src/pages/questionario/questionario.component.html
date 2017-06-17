@@ -1,0 +1,24 @@
+<ion-header style="background:#2F62ED;">
+  <ion-navbar style="background:#2F62ED;">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+        teste
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content style="background:#2F62ED;" text-center padding>
+        <div style="height:80%">
+        
+        <p>Basta responder o quiz para salvar esta região</p>
+          
+        </div>
+
+        <button ion-button large color="success" (click)="resposta('sim')">SIM</button>
+        <button ion-button large color="danger" (click)="resposta('nao')">NÃO</button>
+
+</ion-content>
