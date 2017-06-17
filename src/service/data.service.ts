@@ -5,9 +5,10 @@ export class DataService{
 	dicas(){
 		return [
 			{
-                nomeCidade: "Lago Norte",
-                outrasInfo: "Outras informações importantes.",
-                img: "./../assets/img/mapa-pequeno-lago-norte.png"
+                title: "Lago Norte",
+                body: "Outras informações importantes.",
+                callToAction: "",
+                icon: "./../assets/img/mapa-pequeno-lago-norte.png"
             }
 		];
 	}
