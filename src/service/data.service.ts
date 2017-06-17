@@ -351,18 +351,18 @@ export class DataService{
                 porcentagem: 45
             },
              {
-                icone: "car",
-                descricao: "Acidentes Automotivos",
+                icone: "md-volume-mute",
+                descricao: "Perturbação",
                 porcentagem: 30
             },
              {
-                icone: "car",
-                descricao: "Acidentes Automotivos",
+                icone: "",
+                descricao: "Maus tratos aos animais",
                 porcentagem: 20
             },
              {
-                icone: "car",
-                descricao: "Acidentes Automotivos",
+                icone: "",
+                descricao: "Furtos",
                 porcentagem: 80
             }
         ];
