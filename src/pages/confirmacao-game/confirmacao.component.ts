@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavParams, ViewController } from 'ionic-angular';
+import { NavParams, ViewController, ModalController } from 'ionic-angular';
+import { QuestionarioComponent } from './../questionario/questionario.component';
 
 @Component({
   selector: 'sg-confirmacao-game',
@@ -7,7 +8,10 @@ import { NavParams, ViewController } from 'ionic-angular';
 })
 export class ConfirmacaoGameComponent {
 
-  constructor(params: NavParams, public viewCtrl: ViewController) {
+  constructor(
+              params: NavParams, 
+              public viewCtrl: ViewController,
+              public modalCtrl: ModalController) {
    console.log('UserId', params.get('userId'));
  }
 
@@ -15,5 +19,10 @@ export class ConfirmacaoGameComponent {
    let data = { 'foo': 'bar' };
    this.viewCtrl.dismiss(data);
  }
+
+  presentProfileModal() {
+    let profileModal = this.modalCtrl.create(QuestionarioComponent, { userId: 8675309 });
+    profileModal.present();
+  }
 
 }
