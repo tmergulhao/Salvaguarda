@@ -11,13 +11,20 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { DataService } from './../service/data.service';
+
+import { AreasSalvasComponent } from './../components/areas-salvas/salvos.component';
+import { DadosPoliciaComponent } from './../components/dados-policia/dados-policia.component';
+
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AreasSalvasComponent,
+    DadosPoliciaComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    DataService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+
   ]
 })
 export class AppModule {}

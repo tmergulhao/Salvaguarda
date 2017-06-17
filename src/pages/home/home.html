@@ -1,17 +1,20 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding text-center style="background:#2F62ED;">
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<div style="border: solid 1rem #1D3DE6; height: 30rem; width:30rem; border-radius:50%;margin: auto; " text-center>
+  <img src="./../assets/img/mapa-medio-lago-norte.png" alt="Lago Norte" style="width:20rem; margin: auto">
+</div>
+  <div style="margin-top:2rem">
+    <h1>Lago Norte</h1>
+    <h4>68% salvo</h4>
+    <button ion-button block large style>SALVAR</button>
+  </div>
+  <br>
+  <div text-left style="margin: 5%">
+    <h1>Dados da Policia</h1>
+  </div>
+  <br>
+  <div>
+    <sg-dados-policia [dados]="dado" ></sg-dados-policia>
+  </div>
+
 </ion-content>
