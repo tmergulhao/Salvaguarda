@@ -1,5 +1,8 @@
+import { DetalheDicaComponent } from './../detalhe-dica/detalhe-dica.component';
+import { DicasFinaisComponent } from './../dicas/dicas.component';
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { NavParams, ViewController } from 'ionic-angular';
+import { NavParams, ViewController, ModalController } from 'ionic-angular';
 
 import { DataService } from './../../service/data.service';
 
@@ -8,20 +11,25 @@ import { DataService } from './../../service/data.service';
   templateUrl: 'questionario.component.html'
 })
 export class QuestionarioComponent {
-  dado: any;
-  perguntas: any = [];
-  cont: number=1;
-  constructor(params: NavParams, public viewCtrl: ViewController, private data: DataService) {
-    this.dado = data.perguntas;
+  public dado: any;
+  public quest: any = [];
+  public cont: number=1;
+  public questionario:boolean = true;
 
-    // for(let i=0; i<5; i++){
-    //   console.log(Math.floor(Math.random() * 40));
-    //     console.log(this.dado);
-        
-    //     this.perguntas.push(this.dado[Math.floor(Math.random() * 40)]); 
-    // }
-    console.log(this.perguntas);
-    
+  constructor(
+              params: NavParams, 
+              public viewCtrl: ViewController, 
+              private data: DataService,
+              public modalCtrl: ModalController) {
+    let temp;
+    this.dado = data.perguntas();
+
+    this.quest = []
+
+    for(let i = 0; i < 5 ; i++){
+      this.quest.push(this.dado[Math.floor(Math.random() * 33)])
+    }
+
  }
 
  dismiss() {
@@ -29,9 +37,19 @@ export class QuestionarioComponent {
    this.viewCtrl.dismiss(data);
  }
 
+  presentProfileModal() {
+      let dica = this.data.dicas()[6];
+      let profileModal = this.modalCtrl.create(DetalheDicaComponent, { userId: 8675309, dica : dica });
+      profileModal.present();
+
+      this.dismiss();
+    }
+
  resposta(resp){
   this.cont++;
-  
+  if(this.cont >= 6){
+    this.questionario = false;
+  }
  }
 
 }

@@ -23,6 +23,8 @@ export class ConfirmacaoGameComponent {
   presentProfileModal() {
     let profileModal = this.modalCtrl.create(QuestionarioComponent, { userId: 8675309 });
     profileModal.present();
+
+    this.dismiss();
   }
 
 }

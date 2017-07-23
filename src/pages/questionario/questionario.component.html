@@ -5,20 +5,61 @@
         <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>
-        teste
+    <ion-title text-center>
+        {{questionario ? cont+' de 5': ''}}
+        
     </ion-title>
   </ion-navbar>
 
 </ion-header>
-<ion-content style="background:#2F62ED;" text-center padding>
-        <div style="height:80%">
+<ion-content style="background:#2F62ED;" text-center padding *ngIf="questionario">
         
-        <p>Basta responder o quiz para salvar esta região</p>
+        <div style="height:80%; color: #fff; font-size: 45px; " *ngIf="cont == 1" >
+          
+            {{quest[0].body}}
           
         </div>
+
+        <div style="height:80%; color: #fff; font-size: 45px; " *ngIf="cont == 2" >
+          
+            {{quest[1].body}}
+          
+        </div>
+
+        <div style="height:80%; color: #fff; font-size: 45px; " *ngIf="cont == 3" >
+          
+            {{quest[2].body}}
+          
+        </div>
+
+        <div style="height:80%; color: #fff; font-size: 45px; " *ngIf="cont == 4" >
+          
+            {{quest[3].body}}
+          
+        </div>
+
+        <div style="height:80%; color: #fff; font-size: 45px; " *ngIf="cont == 5" >
+          
+            {{quest[4].body}}
+          
+        </div>
+
 
         <button ion-button large color="success" (click)="resposta('sim')">SIM</button>
         <button ion-button large color="danger" (click)="resposta('nao')">NÃO</button>
 
+</ion-content>
+
+<ion-content *ngIf="!questionario" text-center padding class="fundo-azul">
+<br>
+<br>
+<br>
+    <div style="height:70%; padding-top:30px">
+        <h1 class="texto-branco">Parece que você presencia muita pertubação em ambiente público.</h1>
+        <br>
+        <br>    
+        <h1 class="texto-branco">Existe formas de contribuir com  ordem pública na sua área.</h1>
+    </div>
+    <button ion-button block large (click)="dismiss()"><h1>TUDO BEM</h1></button>
+    <button ion-button block large style="background-color: #ffcc66;" (click)="presentProfileModal()"><h1>QUERO SABER MAIS</h1></button>    
 </ion-content>

@@ -1,11 +1,11 @@
-<ion-card *ngFor="let d of dados">
-    <ion-card-content style="background:#2F62ED; height:100%">
+<ion-card *ngFor="let d of dados" style="background:#5b83f1; " padding-vertical>
+    <ion-card-content style="height:100%">
         <div float-left style="border-radius: 50%; border: solid 1rem #1D3DE6">
             <img src="{{d.img}}" >
         </div>
         <div margin-left text-center>
-            <h1>{{d.nomeCidade}}</h1>
-            <h6>{{d.outrasInfo}}</h6>
+            <h1 class="texto-branco">{{d.nomeCidade}}</h1>
+            <h6 class="texto-branco">{{d.outrasInfo}}</h6>
         </div>
     </ion-card-content>
   </ion-card>

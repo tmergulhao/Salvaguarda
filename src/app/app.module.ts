@@ -1,3 +1,5 @@
+import { DetalheDicaComponent } from './../pages/detalhe-dica/detalhe-dica.component';
+import { DicasFinaisComponent } from './../pages/dicas/dicas.component';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -32,7 +34,8 @@ import { DicasComponent } from "./../components/dicas/dicas.component";
     ConfirmacaoGameComponent,
     MapaScoreComponent,
     QuestionarioComponent,
-    DicasComponent
+    DicasComponent,
+    DetalheDicaComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { DicasComponent } from "./../components/dicas/dicas.component";
     HomePage,
     TabsPage,
     ConfirmacaoGameComponent,
-    QuestionarioComponent
+    QuestionarioComponent,
+    DetalheDicaComponent
   ],
   providers: [
     StatusBar,

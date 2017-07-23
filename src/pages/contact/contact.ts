@@ -8,8 +8,9 @@ import { DataService } from './../../service/data.service';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-  dado: any;
-  constructor(public navCtrl: NavController, private data: DataService) {
-    this.dado = data.dicas();  
+  public dado: any;
+  constructor(public navCtrl: NavController, 
+              private data: DataService) {
+    this.dado = data.dicas();
   }
 }

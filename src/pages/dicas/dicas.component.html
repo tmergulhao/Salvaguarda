@@ -1,0 +1,27 @@
+<ion-header style="background:#2F62ED;">
+  <ion-navbar style="background:#2F62ED;">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding-vertical style="background:#2F62ED;">
+  <div *ngIf="condicao==false">
+    
+    Parabéns, você terminou o questionario e ajudou a salvar esta região!
+
+    Quer saber como ajudar mais?
+
+        <button ion-button block large (click)="change()">Sim, mostre-me mais</button>
+        <button ion-button block large (click)="dismiss()">Voltar</button>
+
+
+  </div>
+	<div *ngIf="condicao==true">
+		<sg-dicas [dados]="dado"></sg-dicas>
+	</div>
+</ion-content>
+

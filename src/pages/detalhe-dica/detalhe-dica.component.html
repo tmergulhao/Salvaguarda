@@ -1,0 +1,20 @@
+<ion-header style="background:#2F62ED;">
+  <ion-navbar style="background:#2F62ED;">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>
+      {{dica.title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background:#2F62ED;" text-center padding>
+    <div style="min-height:70%; padding-top:30px">
+        <p class="texto-branco" style="font-size: 20pt">{{dica.body}}</p>
+    </div>
+    <button ion-button block large (click)="dismiss()"><h1>OBRIGADO</h1></button>
+    <button ion-button block large style="background-color: #ffcc66;" (click)="presentProfileModal()"><h1>{{dica.callToAction}}</h1></button>    
+
+</ion-content>
